@@ -62,6 +62,9 @@
             naver.maps.Event.addListener(marker, 'click', function() {
                 alert("위도: " + lat + "\n경도: " + lng);
             });
+
+            // 지도에 마커 객체 저장
+            map.marker = marker;
         });
     </script>
 </body>
