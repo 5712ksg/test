@@ -1,25 +1,22 @@
-<!-- 네이버 지도 api 호출
-   YOUR_CLIENT_ID 부분에 clientID 입력 -->
-<script type="text/javascript" 
-src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=15puoiy8h1"></script>
-
-
-<!-- 지도가 표시될 html
-지도는 표시하는 돔 요소의 크기에 맞춰서 표시됩니다.
-resize하기 전까지는 이 크기가 고정됩니다! -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=15puoiy8h1"></script>
+</head>
+<body>
 <div id="map" style="width:100%;height:400px;"></div>
 
-
-<!-- 지도 표시 -->
 <script>
+var mapOptions = {
+    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 10
+};
 
-    // 지도가 표시될 옵션 
-    var mapOptions = {
-        center: new naver.maps.LatLng(37.3595704, 127.105399),	// 중심 위치 좌표값
-        zoom: 10		// 줍 레벨
-    };
-    
-    // 지도에 표시                 (지도에 표시될 id값, 옵션)
-    var map = new naver.maps.Map('map', mapOptions);
+var map = new naver.maps.Map('map', mapOptions);
 </script>
-출처: https://chuchugrowup.tistory.com/75 [추추의 개발자 성장일기:티스토리]
+</body>
+</html>
